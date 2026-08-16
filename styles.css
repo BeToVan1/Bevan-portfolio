@@ -334,7 +334,117 @@ footer.site .foot-inner {
 
 footer.site a { font-family: var(--font-display); font-size: 13px; }
 
-/* ---------------- Home-specific ---------------- */
+/* ---------------- Architecture diagrams ---------------- */
+.diagram-wrap {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  padding: 18px 18px 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.diagram-label {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-bottom: 10px;
+}
+
+.diagram-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .diagram-wrap svg {
+    width: 600px;
+    max-width: none;
+  }
+}
+
+.dg-box {
+  fill: var(--bg);
+  stroke: var(--line-strong);
+  stroke-width: 1.2;
+}
+
+.dg-box.dg-key {
+  fill: var(--highlight-soft);
+  stroke: var(--highlight);
+  stroke-width: 1.4;
+}
+
+.dg-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  fill: var(--ink);
+}
+
+.dg-sub {
+  font-family: var(--font-body);
+  font-size: 9.5px;
+  fill: var(--muted);
+}
+
+.dg-arrow {
+  stroke: var(--muted-2);
+  stroke-width: 1.3;
+  fill: none;
+  marker-end: url(#arrowhead);
+}
+
+.dg-arrow-label {
+  font-family: var(--font-display);
+  font-size: 9px;
+  fill: var(--muted-2);
+}
+
+/* ---------------- Profile photo ---------------- */
+.hero-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 108px;
+  height: 108px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-photo.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--muted-2);
+  text-align: center;
+  padding: 8px;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .hero-flex { flex-direction: column-reverse; gap: 20px; }
+  .hero-photo { width: 84px; height: 84px; }
+}
 .role-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
