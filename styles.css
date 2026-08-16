@@ -1,0 +1,390 @@
+/* ============================================================
+   Bevan To — Portfolio
+   Tokens
+   ============================================================ */
+:root {
+  --bg: #F2F5F3;
+  --bg-card: #FFFFFF;
+  --ink: #14181C;
+  --muted: #5B6570;
+  --muted-2: #8A929B;
+  --line: #DBE1DF;
+  --line-strong: #14181C;
+  --highlight: #FFCB3E;
+  --highlight-soft: #FFF0C2;
+  --accent: #0E3B2E;
+  --radius: 3px;
+
+  --font-display: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --container: 760px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--ink); }
+
+a:focus-visible,
+button:focus-visible,
+.tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------------- Header / Nav ---------------- */
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.identity .name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.identity .role {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+nav.tabs {
+  position: relative;
+  display: inline-flex;
+  gap: 2px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.tab {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  padding: 7px 16px;
+  border-radius: 999px;
+  transition: color 0.2s ease;
+}
+
+.tab.active {
+  color: var(--ink);
+}
+
+.tab-indicator {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  border-radius: 999px;
+  background: var(--highlight);
+  transition: left 0.35s cubic-bezier(.65,0,.35,1), width 0.35s cubic-bezier(.65,0,.35,1);
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab-indicator { transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------------- Hero ---------------- */
+.hero {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.eyebrow .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--highlight);
+  display: inline-block;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+  max-width: 14ch;
+}
+
+.hero p.lede {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 52ch;
+  margin: 0 0 24px;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.hero-links a {
+  font-family: var(--font-display);
+  font-size: 13px;
+}
+
+/* ---------------- Sections ---------------- */
+section.block {
+  padding: 44px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section.block:last-of-type { border-bottom: none; }
+
+.block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.block-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.block-note {
+  font-size: 13px;
+  color: var(--muted-2);
+  font-style: italic;
+}
+
+/* ---------------- Entries (experience/projects) ---------------- */
+.entry {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.entry:first-child { border-top: none; padding-top: 0; }
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.entry-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.entry-title a { color: var(--ink); }
+
+.entry-dates {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.entry ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.entry li {
+  margin-bottom: 5px;
+  color: var(--ink);
+}
+
+.entry li.muted-line { color: var(--muted); }
+
+/* Relevance mark — the signature element.
+   Applied to whichever entries are top-ranked for the active lens. */
+.mark {
+  position: relative;
+  padding: 0 3px;
+  white-space: nowrap;
+}
+.mark::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 2px;
+  top: 2px;
+  background: var(--highlight);
+  transform: rotate(-0.6deg);
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.rank-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--highlight-soft);
+  border: 1px solid var(--highlight);
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* ---------------- Skills ---------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+}
+
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
+
+.skill-cat {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.skill-list { font-size: 14.5px; }
+
+/* ---------------- Footer ---------------- */
+footer.site {
+  padding: 40px 0 60px;
+}
+
+footer.site .foot-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer.site a { font-family: var(--font-display); font-size: 13px; }
+
+/* ---------------- Home-specific ---------------- */
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 560px) {
+  .role-cards { grid-template-columns: 1fr; }
+}
+
+.role-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  background: var(--bg-card);
+  text-decoration: none;
+  color: var(--ink);
+  display: block;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.role-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.role-card .rc-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.role-card .rc-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.role-card .rc-desc {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.role-card .rc-arrow {
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--accent);
+}
