@@ -334,6 +334,26 @@ footer.site .foot-inner {
 
 footer.site a { font-family: var(--font-display); font-size: 13px; }
 
+/* ---------------- Certificate image ---------------- */
+.cert-image-wrap {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.cert-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cert-image-wrap a {
+  display: block;
+  line-height: 0;
+}
+
 /* ---------------- Architecture diagrams ---------------- */
 .diagram-wrap {
   margin-top: 14px;
@@ -449,6 +469,14 @@ footer.site a { font-family: var(--font-display); font-size: 13px; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+}
+
+.role-cards-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 720px) {
+  .role-cards-3 { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 560px) {
