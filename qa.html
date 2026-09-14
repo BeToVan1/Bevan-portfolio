@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" data-theme="dark"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bevan To — QA &amp; Testing</title>
 <meta name="description" content="Bevan To's QA-focused portfolio — defect-finding, systematic debugging, and verification work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<meta name="theme-color" content="#101211"></head>
+<body class="detail-page"><a class="skip-link" href="#main">Skip to content</a><div class="reading-progress" aria-hidden="true"></div>
 
 <header class="site">
   <div class="wrap header-inner">
-    <div class="identity">
-      <span class="name">Bevan To</span>
-      <span class="role">Software Engineer</span>
-    </div>
+    <a class="identity" href="index.html" aria-label="Bevan To, home"><span class="monogram" aria-hidden="true">bt<span>.</span></span><span class="identity-text"><span class="name">Bevan To</span><span class="role">Software Engineer</span></span></a>
     <nav class="tabs" aria-label="Portfolio view">
-      <span class="tab-indicator"></span>
+      
       <a class="tab" href="index.html">Home</a>
       <a class="tab" href="swe.html">SWE</a>
-      <a class="tab active" href="qa.html">QA</a>
+      <a class="tab active" href="qa.html" aria-current="page">QA</a>
       <a class="tab" href="gamedev.html">Game Dev</a>
     </nav>
-  </div>
+  <a class="header-contact" href="mailto:BevanTo49797@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero wrap">
-    <h1>Quality Assurance</h1>
-    <p class="lede">This view leads with the defect-finding and systematic verification work — testing real products, debugging model output, and the testing methodology behind my projects.</p>
-    <div class="hero-links">
-      <a href="mailto:BevanTo49797@gmail.com">BevanTo49797@gmail.com</a>
-      <a href="https://www.linkedin.com/in/bevan-to-076206245/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/betovan1" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
+    <h1>Find the edge cases.<br><span class="headline-accent">Build confidence.</span></h1>
+    
+    
+  <div class="hero-bottom"><p class="lede">Good software holds up beyond the happy path. My work spans product testing, AI code validation, debugging, and systematic verification.</p><div class="hero-actions"><a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="https://github.com/betovan1" target="_blank" rel="noopener">GitHub ↗</a></div></div><div class="hero-meta"><span>Westminster, California</span><span>B.S. Computer Science · UC Irvine</span><a href="https://www.linkedin.com/in/bevan-to-076206245/" target="_blank" rel="noopener">LinkedIn ↗</a></div></section>
 
-  <section class="block wrap">
-    <div class="block-head">
-      <span class="block-title">Experience</span>
+  <section class="block wrap" id="experience">
+    <div class="block-head"><span class="section-index" aria-hidden="true">01</span>
+      <h2 class="block-title">Experience</h2>
     </div>
 
-    <div class="entry">
+    <div class="entry reveal">
       <div class="entry-head">
-        <span class="entry-title">Software Engineering Apprentice — LunarTech</span>
+        <h3 class="entry-title">Software Engineering Apprentice — LunarTech</h3>
         <span class="entry-dates">Jun 2026 – Aug 2026</span>
       </div>
       <ul>
@@ -58,9 +50,9 @@
       </ul>
     </div>
 
-    <div class="entry">
+    <div class="entry reveal">
       <div class="entry-head">
-        <span class="entry-title">Software Engineer, AI Consultant — Scale AI</span>
+        <h3 class="entry-title">Software Engineer, AI Consultant — Scale AI</h3>
         <span class="entry-dates">Mar 2024 – May 2025</span>
       </div>
       <ul>
@@ -76,185 +68,181 @@
     </div>
   </section>
 
-  <section class="block wrap">
-    <div class="block-head">
-      <span class="block-title">Projects</span>
-      <span class="block-note">ranked by verification depth</span>
+  <section class="block wrap" id="projects">
+    <div class="block-head"><span class="section-index" aria-hidden="true">02</span>
+      <h2 class="block-title">Selected work</h2>
+      
     </div>
 
-    <div class="entry">
-      <span class="rank-tag">Top match</span>
+    
+
+    
+
+    
+  <div class="project-grid"><div class="entry reveal project-card" data-category="search" id="ics-search-engine"><div class="project-top"><span class="project-number">01</span><span>Search &amp; retrieval</span><span class="project-glyph" aria-hidden="true">⌕</span></div><div class="project-visual search" aria-hidden="true"><div class="visual-grid"></div><div class="visual-metric"><strong>50k+</strong><span>pages indexed</span></div><div class="visual-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      
       <div class="entry-head">
-        <span class="entry-title">ICS Search Engine</span>
+        <h3 class="entry-title">ICS Search Engine</h3>
         <span class="entry-dates">Nov 2023 – Dec 2023</span>
       </div>
-      <ul>
+      <p class="project-stack">Python / Flask / TF-IDF</p><ul>
         <li>Search engine indexing 50,000+ UCI pages, handling broken HTML and duplicate detection</li>
         <li><span class="mark">Compared ranked output against baseline results</span> to verify accuracy before and after performance changes</li>
         <li>Returns complex query results in under 300ms after tiered-index optimization</li>
       </ul>
-      <div class="diagram-wrap">
+      <details class="architecture"><summary>Explore architecture <span aria-hidden="true">+</span></summary><div class="diagram-wrap">
   <div class="diagram-label">System overview</div>
   <svg viewBox="0 0 760 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: crawler feeds parser, feeds inverted index with TF-IDF and tiering, feeds query engine, feeds Flask GUI">
     <defs>
       <marker id="arrow-ics" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"/>
+        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"></path>
       </marker>
     </defs>
-    <rect class="dg-box" x="10" y="38" width="120" height="54" rx="2"/>
+    <rect class="dg-box" x="10" y="38" width="120" height="54" rx="2"></rect>
     <text class="dg-label" x="70" y="60" text-anchor="middle">Crawler</text>
     <text class="dg-sub" x="70" y="76" text-anchor="middle">50k+ pages</text>
 
-    <line class="dg-arrow" x1="130" y1="65" x2="148" y2="65" marker-end="url(#arrow-ics)"/>
+    <line class="dg-arrow" x1="130" y1="65" x2="148" y2="65" marker-end="url(#arrow-ics)"></line>
 
-    <rect class="dg-box" x="150" y="38" width="130" height="54" rx="2"/>
+    <rect class="dg-box" x="150" y="38" width="130" height="54" rx="2"></rect>
     <text class="dg-label" x="215" y="60" text-anchor="middle">HTML Parser</text>
     <text class="dg-sub" x="215" y="76" text-anchor="middle">dedup + traps</text>
 
-    <line class="dg-arrow" x1="280" y1="65" x2="298" y2="65" marker-end="url(#arrow-ics)"/>
+    <line class="dg-arrow" x1="280" y1="65" x2="298" y2="65" marker-end="url(#arrow-ics)"></line>
 
-    <rect class="dg-box dg-key" x="300" y="28" width="160" height="74" rx="2"/>
+    <rect class="dg-box dg-key" x="300" y="28" width="160" height="74" rx="2"></rect>
     <text class="dg-label" x="380" y="58" text-anchor="middle">Inverted Index</text>
     <text class="dg-sub" x="380" y="74" text-anchor="middle">TF-IDF scoring</text>
     <text class="dg-sub" x="380" y="88" text-anchor="middle">tiered lookup</text>
 
-    <line class="dg-arrow" x1="460" y1="65" x2="478" y2="65" marker-end="url(#arrow-ics)"/>
+    <line class="dg-arrow" x1="460" y1="65" x2="478" y2="65" marker-end="url(#arrow-ics)"></line>
 
-    <rect class="dg-box" x="480" y="38" width="120" height="54" rx="2"/>
+    <rect class="dg-box" x="480" y="38" width="120" height="54" rx="2"></rect>
     <text class="dg-label" x="540" y="60" text-anchor="middle">Query Engine</text>
     <text class="dg-sub" x="540" y="76" text-anchor="middle">&lt;300ms</text>
 
-    <line class="dg-arrow" x1="600" y1="65" x2="618" y2="65" marker-end="url(#arrow-ics)"/>
+    <line class="dg-arrow" x1="600" y1="65" x2="618" y2="65" marker-end="url(#arrow-ics)"></line>
 
-    <rect class="dg-box" x="620" y="38" width="130" height="54" rx="2"/>
+    <rect class="dg-box" x="620" y="38" width="130" height="54" rx="2"></rect>
     <text class="dg-label" x="685" y="60" text-anchor="middle">Flask GUI</text>
     <text class="dg-sub" x="685" y="76" text-anchor="middle">results view</text>
   </svg>
-</div>
-    </div>
-
-    <div class="entry">
+</div></details>
+    </div><div class="entry reveal project-card" data-category="ai" id="stockpredictor"><div class="project-top"><span class="project-number">02</span><span>Applied machine learning</span><span class="project-glyph" aria-hidden="true">⌁</span></div><div class="project-visual ai" aria-hidden="true"><div class="visual-grid"></div><div class="visual-metric"><strong>LSTM</strong><span>powered predictions</span></div><div class="visual-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
       <div class="entry-head">
-        <span class="entry-title">StockPredictor</span>
+        <h3 class="entry-title">StockPredictor</h3>
         <span class="entry-dates">Jun 2025 – Aug 2025</span>
       </div>
-      <ul>
+      <p class="project-stack">React / NestJS / TensorFlow</p><ul>
         <li>Full-stack app predicting stock prices using LSTM models on historical market data</li>
         <li>NestJS backend with REST APIs for predictions, user input, and real-time data</li>
         <li>Finnhub API integration for relevant financial news alongside predictions</li>
       </ul>
-      <div class="diagram-wrap">
+      <details class="architecture"><summary>Explore architecture <span aria-hidden="true">+</span></summary><div class="diagram-wrap">
   <div class="diagram-label">System overview</div>
   <svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: React frontend calls NestJS backend, which calls an LSTM model for predictions and the Finnhub API for news, then returns combined results">
     <defs>
       <marker id="arrow-stock" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"/>
+        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"></path>
       </marker>
     </defs>
 
-    <rect class="dg-box" x="230" y="10" width="140" height="50" rx="2"/>
+    <rect class="dg-box" x="230" y="10" width="140" height="50" rx="2"></rect>
     <text class="dg-label" x="300" y="31" text-anchor="middle">React Frontend</text>
     <text class="dg-sub" x="300" y="46" text-anchor="middle">predictions + news</text>
 
-    <line class="dg-arrow" x1="300" y1="60" x2="300" y2="78" marker-end="url(#arrow-stock)"/>
+    <line class="dg-arrow" x1="300" y1="60" x2="300" y2="78" marker-end="url(#arrow-stock)"></line>
 
-    <rect class="dg-box" x="220" y="80" width="160" height="50" rx="2"/>
+    <rect class="dg-box" x="220" y="80" width="160" height="50" rx="2"></rect>
     <text class="dg-label" x="300" y="101" text-anchor="middle">NestJS Backend</text>
     <text class="dg-sub" x="300" y="116" text-anchor="middle">REST API layer</text>
 
-    <line class="dg-arrow" x1="255" y1="130" x2="150" y2="150" marker-end="url(#arrow-stock)"/>
-    <line class="dg-arrow" x1="345" y1="130" x2="450" y2="150" marker-end="url(#arrow-stock)"/>
+    <line class="dg-arrow" x1="255" y1="130" x2="150" y2="150" marker-end="url(#arrow-stock)"></line>
+    <line class="dg-arrow" x1="345" y1="130" x2="450" y2="150" marker-end="url(#arrow-stock)"></line>
 
-    <rect class="dg-box dg-key" x="60" y="150" width="160" height="34" rx="2"/>
+    <rect class="dg-box dg-key" x="60" y="150" width="160" height="34" rx="2"></rect>
     <text class="dg-label" x="140" y="171" text-anchor="middle">LSTM Model</text>
 
-    <rect class="dg-box" x="400" y="150" width="160" height="34" rx="2"/>
+    <rect class="dg-box" x="400" y="150" width="160" height="34" rx="2"></rect>
     <text class="dg-label" x="480" y="171" text-anchor="middle">Finnhub API</text>
   </svg>
-</div>
-    </div>
-
-    <div class="entry">
+</div></details>
+    </div><div class="entry reveal project-card" data-category="fullstack" id="mycinelist"><div class="project-top"><span class="project-number">03</span><span>Full-stack application</span><span class="project-glyph" aria-hidden="true">⊞</span></div><div class="project-visual fullstack" aria-hidden="true"><div class="visual-grid"></div><div class="visual-metric"><strong>OAuth</strong><span>connected watchlists</span></div><div class="visual-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
       <div class="entry-head">
-        <span class="entry-title"><a href="https://mycinelist.onrender.com/" target="_blank" rel="noopener">MyCineList ↗</a></span>
+        <h3 class="entry-title"><a href="https://mycinelist.onrender.com/" target="_blank" rel="noopener">MyCineList ↗</a></h3>
         <span class="entry-dates">Sep 2023 – Oct 2023</span>
       </div>
-      <ul>
+      <p class="project-stack">Node.js / Express / MongoDB</p><ul>
         <li>Full-stack app for rating movies and managing personal watchlists</li>
         <li>User authentication via Google OAuth</li>
         <li>MongoDB for user data, MovieDB API for movie details</li>
       </ul>
-      <div class="diagram-wrap">
+      <details class="architecture"><summary>Explore architecture <span aria-hidden="true">+</span></summary><div class="diagram-wrap">
   <div class="diagram-label">System overview</div>
   <svg viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: frontend authenticates via Google OAuth, then talks to Express backend, which reads and writes MongoDB and calls the MovieDB API">
     <defs>
       <marker id="arrow-cine" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"/>
+        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"></path>
       </marker>
     </defs>
 
-    <rect class="dg-box" x="10" y="38" width="130" height="54" rx="2"/>
+    <rect class="dg-box" x="10" y="38" width="130" height="54" rx="2"></rect>
     <text class="dg-label" x="75" y="60" text-anchor="middle">Frontend</text>
     <text class="dg-sub" x="75" y="76" text-anchor="middle">ratings + lists</text>
 
-    <line class="dg-arrow" x1="140" y1="65" x2="158" y2="65" marker-end="url(#arrow-cine)"/>
+    <line class="dg-arrow" x1="140" y1="65" x2="158" y2="65" marker-end="url(#arrow-cine)"></line>
 
-    <rect class="dg-box dg-key" x="160" y="28" width="150" height="74" rx="2"/>
+    <rect class="dg-box dg-key" x="160" y="28" width="150" height="74" rx="2"></rect>
     <text class="dg-label" x="235" y="58" text-anchor="middle">Google OAuth</text>
     <text class="dg-sub" x="235" y="74" text-anchor="middle">user</text>
     <text class="dg-sub" x="235" y="88" text-anchor="middle">authentication</text>
 
-    <line class="dg-arrow" x1="310" y1="65" x2="328" y2="65" marker-end="url(#arrow-cine)"/>
+    <line class="dg-arrow" x1="310" y1="65" x2="328" y2="65" marker-end="url(#arrow-cine)"></line>
 
-    <rect class="dg-box" x="330" y="38" width="140" height="54" rx="2"/>
+    <rect class="dg-box" x="330" y="38" width="140" height="54" rx="2"></rect>
     <text class="dg-label" x="400" y="60" text-anchor="middle">Express Backend</text>
     <text class="dg-sub" x="400" y="76" text-anchor="middle">API layer</text>
 
-    <line class="dg-arrow" x1="470" y1="55" x2="488" y2="45" marker-end="url(#arrow-cine)"/>
-    <line class="dg-arrow" x1="470" y1="75" x2="488" y2="85" marker-end="url(#arrow-cine)"/>
+    <line class="dg-arrow" x1="470" y1="55" x2="488" y2="45" marker-end="url(#arrow-cine)"></line>
+    <line class="dg-arrow" x1="470" y1="75" x2="488" y2="85" marker-end="url(#arrow-cine)"></line>
 
-    <rect class="dg-box" x="490" y="20" width="120" height="40" rx="2"/>
+    <rect class="dg-box" x="490" y="20" width="120" height="40" rx="2"></rect>
     <text class="dg-label" x="550" y="44" text-anchor="middle">MongoDB</text>
 
-    <rect class="dg-box" x="490" y="70" width="220" height="40" rx="2"/>
+    <rect class="dg-box" x="490" y="70" width="220" height="40" rx="2"></rect>
     <text class="dg-label" x="600" y="94" text-anchor="middle">MovieDB API</text>
   </svg>
-</div>
-    </div>
-  </section>
+</div></details>
+    </div></div></section>
 
-  <section class="block wrap">
-    <div class="block-head">
-      <span class="block-title">Skills</span>
+  <section class="block wrap" id="skills">
+    <div class="block-head"><span class="section-index" aria-hidden="true">03</span>
+      <h2 class="block-title">Skills</h2>
     </div>
     <div class="skills-grid">
       <div>
         <div class="skill-cat">Tools</div>
-        <div class="skill-list">Selenium, Playwright, Git, Trello, Claude, GitHub Copilot</div>
+        <div class="skill-list"><span>Selenium</span><span>Playwright</span><span>Git</span><span>Trello</span><span>Claude</span><span>GitHub Copilot</span></div>
       </div>
       <div>
         <div class="skill-cat">Languages</div>
-        <div class="skill-list">Java, Python, JavaScript, C/C++, SQL, TypeScript, HTML/CSS</div>
+        <div class="skill-list"><span>Java</span><span>Python</span><span>JavaScript</span><span>C/C++</span><span>SQL</span><span>TypeScript</span><span>HTML/CSS</span></div>
       </div>
       <div>
         <div class="skill-cat">Frameworks</div>
-        <div class="skill-list">Node.js, Express.js, Flask, React, Bootstrap, TensorFlow</div>
+        <div class="skill-list"><span>Node.js</span><span>Express.js</span><span>Flask</span><span>React</span><span>Bootstrap</span><span>TensorFlow</span></div>
       </div>
       <div>
         <div class="skill-cat">Databases</div>
-        <div class="skill-list">MongoDB, MySQL, PostgreSQL, Couchbase, Neo4j, Spark, Cassandra</div>
+        <div class="skill-list"><span>MongoDB</span><span>MySQL</span><span>PostgreSQL</span><span>Couchbase</span><span>Neo4j</span><span>Spark</span><span>Cassandra</span></div>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site">
-  <div class="wrap foot-inner">
-    <span>Bevan To · Westminster, CA</span>
-    <a href="mailto:BevanTo49797@gmail.com">Get in touch →</a>
-  </div>
-</footer>
+<footer class="site" id="contact"><div class="wrap"><div class="contact-heading"><h2>Let’s build<br><span>something good.</span></h2><a class="contact-arrow" href="mailto:BevanTo49797@gmail.com" aria-label="Email Bevan To">↗</a></div><div class="contact-links"><a href="mailto:BevanTo49797@gmail.com">BevanTo49797@gmail.com</a><button class="copy-email" type="button" hidden="">Copy email</button><span class="copy-status" role="status" aria-live="polite"></span></div><div class="foot-inner"><span>© 2026 Bevan To · Westminster, CA</span><div><a href="https://www.linkedin.com/in/bevan-to-076206245/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/betovan1" target="_blank" rel="noopener">GitHub ↗</a><a href="#main">Back to top ↑</a></div></div></div></footer>
 
 <script src="script.js"></script>
-</body>
-</html>
+
+
+</body></html>
