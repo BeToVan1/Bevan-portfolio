@@ -20,32 +20,21 @@ if (filters) {
   filters.addEventListener('click', (event) => {
     const button = event.target.closest('button[data-filter]');
     if (!button) return;
+    const category = button.getAttribute('aria-pressed') === 'true' ? 'all' : button.dataset.filter;
     filters.querySelectorAll('button').forEach((item) => {
-      const selected = item === button;
+      const selected = item.dataset.filter === category;
       item.classList.toggle('active', selected);
       item.setAttribute('aria-pressed', String(selected));
     });
     let count = 0;
     cards.forEach((card) => {
-      card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter;
+      card.hidden = category !== 'all' && card.dataset.category !== category;
       if (!card.hidden) count++;
     });
-    status.textContent = count + (count === 1 ? ' project shown.' : ' projects shown.');
+    status.textContent = category === 'all'
+      ? 'All 6 projects. Select a category to filter; select it again to show all.'
+      : count + (count === 1 ? ' project shown. ' : ' projects shown. ') + 'Select ' + button.textContent + ' again to show all.';
     queueProgress();
-  });
-}
-
-const copyButton = document.querySelector('.copy-email');
-if (copyButton && navigator.clipboard && window.isSecureContext) {
-  copyButton.hidden = false;
-  copyButton.addEventListener('click', async () => {
-    const status = document.querySelector('.copy-status');
-    try {
-      await navigator.clipboard.writeText('BevanTo49797@gmail.com');
-      status.textContent = 'Email copied.';
-    } catch {
-      status.textContent = 'Copy unavailable. Select the email address or use the email link.';
-    }
   });
 }
 
@@ -67,4 +56,3 @@ window.addEventListener('scroll', queueProgress, { passive: true });
 window.addEventListener('resize', queueProgress);
 document.addEventListener('toggle', queueProgress, true);
 updateProgress();
-
