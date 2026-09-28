@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bobert’s Mad Dash to the Silly and Whimsy Factory — Bevan To</title>
+<meta name="description" content="A 3D skateboarding game built by a team of 14 for the Gameplay First game jam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#101211"></head>
+<body class="case-page"><a class="skip-link" href="#main">Skip to content</a><div class="reading-progress" aria-hidden="true"></div>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="identity" href="index.html" aria-label="Bevan To, home"><span class="monogram" aria-hidden="true">bt<span>.</span></span><span class="identity-text"><span class="name">Bevan To</span><span class="role">Software Engineer</span></span></a>
+    <nav class="tabs" aria-label="Portfolio view">
+      
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab" href="swe.html">SWE</a>
+      <a class="tab" href="qa.html">QA</a>
+      <a class="tab" href="gamedev.html">Game Dev</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main"><article class="wrap case-content"><a class="back-link" href="index.html#projects">← Selected work</a><h1>Bobert’s Mad Dash to the Silly and Whimsy Factory</h1><p class="lede">A 3D skateboarding game built by a team of 14 for the Gameplay First game jam.</p><div class="project-visual custom-art skate"><svg viewBox="0 0 480 180" class="project-art" aria-hidden="true" focusable="false"><image href="cover-bobert.jpg" x="15" y="20" width="220" height="130" preserveAspectRatio="xMidYMid meet"></image><g class="art-scene"><path class="skate-ground" d="M250 143h180"></path><g class="skate-board"><path d="M278 106q10 13 24 13h70q14 0 24-13"></path><circle cx="309" cy="130" r="8"></circle><circle cx="367" cy="130" r="8"></circle></g><g class="combo-spark"><path d="M350 34v20M340 44h20M401 65v14M394 72h14"></path></g></g></svg></div><div class="case-sections"><section><h2>My contribution</h2><p>I implemented a combo input system that maps input sequences to trick animations. A tree-like structure organizes the sequences and the tricks they can trigger.</p></section><section><h2>Timing matters</h2><p>Animation timing and input buffering determine when a new trick can start. The system accepts valid inputs during the appropriate windows rather than triggering every input immediately.</p></section><section><h2>Connecting input and animation</h2><p>The central implementation challenge is coordinating a sequence of player inputs with the animation currently in progress. The combo structure, timing windows, and buffering work together to control the transition to the next trick.</p></section></div><div class="case-actions"><a class="button primary" href="https://frenchfrys.itch.io/boberts-mad-dash-to-the-silly-and-whimsy-factory" target="_blank" rel="noopener">Play on itch.io ↗</a><a class="button secondary" href="#contact">Discuss this project ↓</a></div></article></main>
+
+<footer class="site" id="contact"><div class="wrap contact-panel"><div><h2>Have a role or project in mind?</h2><p>Get in touch to talk software, AI, or games.</p></div><a class="button primary" href="mailto:BevanTo49797@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div><div class="wrap foot-inner"><span>© 2026 Bevan To · Westminster, CA</span><a href="#main">Back to top ↑</a></div></footer>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+</body></html>

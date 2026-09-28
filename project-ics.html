@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICS Search Engine — Bevan To</title>
+<meta name="description" content="A search engine for more than 50,000 UC Irvine web pages, built around an inverted index and relevance ranking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#101211"></head>
+<body class="case-page"><a class="skip-link" href="#main">Skip to content</a><div class="reading-progress" aria-hidden="true"></div>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="identity" href="index.html" aria-label="Bevan To, home"><span class="monogram" aria-hidden="true">bt<span>.</span></span><span class="identity-text"><span class="name">Bevan To</span><span class="role">Software Engineer</span></span></a>
+    <nav class="tabs" aria-label="Portfolio view">
+      
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab" href="swe.html">SWE</a>
+      <a class="tab" href="qa.html">QA</a>
+      <a class="tab" href="gamedev.html">Game Dev</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main"><article class="wrap case-content"><a class="back-link" href="index.html#projects">← Selected work</a><h1>ICS Search Engine</h1><p class="lede">A search engine for more than 50,000 UC Irvine web pages, built around an inverted index and relevance ranking.</p><div class="project-visual custom-art search"><svg viewBox="0 0 480 180" class="project-art" aria-hidden="true" focusable="false"><text x="22" y="69" class="art-title">50k+</text><text x="22" y="96" class="art-caption">pages indexed</text><g class="art-scene"><g class="search-docs"><rect x="265" y="35" width="112" height="100" rx="7"></rect><path d="M280 56h75M280 76h58M280 96h65M280 116h42"></path></g><g class="search-lens"><circle cx="375" cy="85" r="27"></circle><path d="m394 105 30 30"></path></g></g></svg></div><div class="case-sections"><section><h2>From pages to an index</h2><p>The crawler feeds an HTML parser before documents enter the index. Handling broken HTML and detecting duplicate content keeps repeated or malformed pages from undermining retrieval.</p></section><section><h2>Finding relevant results</h2><p>An inverted index connects terms to documents. TF-IDF scoring weighs the terms for relevance, while tiered indexing organizes retrieval. The query engine returns complex query results in under 300 milliseconds.</p></section><section><h2>Connecting the system</h2><p>A Flask interface presents results from the query engine. The architecture connects crawling, parsing, indexing, ranking, and a browser-facing results view.</p></section></div><section class="case-architecture"><h2>System architecture</h2><div class="diagram-wrap">
+  <div class="diagram-label">System overview</div>
+  <svg viewBox="0 0 760 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: crawler feeds parser, feeds inverted index with TF-IDF and tiering, feeds query engine, feeds Flask GUI">
+    <defs>
+      <marker id="arrow-ics" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"></path>
+      </marker>
+    </defs>
+    <rect class="dg-box" x="10" y="38" width="120" height="54" rx="2"></rect>
+    <text class="dg-label" x="70" y="60" text-anchor="middle">Crawler</text>
+    <text class="dg-sub" x="70" y="76" text-anchor="middle">50k+ pages</text>
+
+    <line class="dg-arrow" x1="130" y1="65" x2="148" y2="65" marker-end="url(#arrow-ics)"></line>
+
+    <rect class="dg-box" x="150" y="38" width="130" height="54" rx="2"></rect>
+    <text class="dg-label" x="215" y="60" text-anchor="middle">HTML Parser</text>
+    <text class="dg-sub" x="215" y="76" text-anchor="middle">dedup + traps</text>
+
+    <line class="dg-arrow" x1="280" y1="65" x2="298" y2="65" marker-end="url(#arrow-ics)"></line>
+
+    <rect class="dg-box dg-key" x="300" y="28" width="160" height="74" rx="2"></rect>
+    <text class="dg-label" x="380" y="58" text-anchor="middle">Inverted Index</text>
+    <text class="dg-sub" x="380" y="74" text-anchor="middle">TF-IDF scoring</text>
+    <text class="dg-sub" x="380" y="88" text-anchor="middle">tiered lookup</text>
+
+    <line class="dg-arrow" x1="460" y1="65" x2="478" y2="65" marker-end="url(#arrow-ics)"></line>
+
+    <rect class="dg-box" x="480" y="38" width="120" height="54" rx="2"></rect>
+    <text class="dg-label" x="540" y="60" text-anchor="middle">Query Engine</text>
+    <text class="dg-sub" x="540" y="76" text-anchor="middle">&lt;300ms</text>
+
+    <line class="dg-arrow" x1="600" y1="65" x2="618" y2="65" marker-end="url(#arrow-ics)"></line>
+
+    <rect class="dg-box" x="620" y="38" width="130" height="54" rx="2"></rect>
+    <text class="dg-label" x="685" y="60" text-anchor="middle">Flask GUI</text>
+    <text class="dg-sub" x="685" y="76" text-anchor="middle">results view</text>
+  </svg>
+</div></section><div class="case-actions"><a class="button secondary" href="#contact">Discuss this project ↓</a></div></article></main>
+
+<footer class="site" id="contact"><div class="wrap contact-panel"><div><h2>Have a role or project in mind?</h2><p>Get in touch to talk software, AI, or games.</p></div><a class="button primary" href="mailto:BevanTo49797@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div><div class="wrap foot-inner"><span>© 2026 Bevan To · Westminster, CA</span><a href="#main">Back to top ↑</a></div></footer>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+</body></html>

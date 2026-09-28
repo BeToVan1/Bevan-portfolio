@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyCineList — Bevan To</title>
+<meta name="description" content="A full-stack movie application with Google sign-in, ratings, and personal watchlists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#101211"></head>
+<body class="case-page"><a class="skip-link" href="#main">Skip to content</a><div class="reading-progress" aria-hidden="true"></div>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="identity" href="index.html" aria-label="Bevan To, home"><span class="monogram" aria-hidden="true">bt<span>.</span></span><span class="identity-text"><span class="name">Bevan To</span><span class="role">Software Engineer</span></span></a>
+    <nav class="tabs" aria-label="Portfolio view">
+      
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab" href="swe.html">SWE</a>
+      <a class="tab" href="qa.html">QA</a>
+      <a class="tab" href="gamedev.html">Game Dev</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main"><article class="wrap case-content"><a class="back-link" href="index.html#projects">← Selected work</a><h1>MyCineList</h1><p class="lede">A full-stack movie application with Google sign-in, ratings, and personal watchlists.</p><div class="project-visual custom-art cinema"><svg viewBox="0 0 480 180" class="project-art" aria-hidden="true" focusable="false"><text x="22" y="69" class="art-title">MyCineList</text><text x="22" y="96" class="art-caption">discover · rate · save</text><g class="art-scene"><g class="film-reel"><circle cx="348" cy="85" r="55"></circle><circle cx="348" cy="85" r="8"></circle><circle cx="348" cy="52" r="11"></circle><circle cx="381" cy="85" r="11"></circle><circle cx="348" cy="118" r="11"></circle><circle cx="315" cy="85" r="11"></circle></g><path d="M348 140h95"></path></g></svg></div><div class="case-sections"><section><h2>A personal movie collection</h2><p>MyCineList lets users search for movies, rate them, and keep personalized watchlists. The interface brings discovery and personal organization into the same application.</p></section><section><h2>Identity and persistence</h2><p>Google OAuth authenticates users. The Node.js and Express backend connects application requests with MongoDB, where user data is stored.</p></section><section><h2>External movie data</h2><p>The MovieDB API supplies movie information, while MongoDB holds the application’s user data. The backend is the connection between these sources and the frontend.</p></section></div><section class="case-architecture"><h2>System architecture</h2><div class="diagram-wrap">
+  <div class="diagram-label">System overview</div>
+  <svg viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: frontend authenticates via Google OAuth, then talks to Express backend, which reads and writes MongoDB and calls the MovieDB API">
+    <defs>
+      <marker id="arrow-cine" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"></path>
+      </marker>
+    </defs>
+
+    <rect class="dg-box" x="10" y="38" width="130" height="54" rx="2"></rect>
+    <text class="dg-label" x="75" y="60" text-anchor="middle">Frontend</text>
+    <text class="dg-sub" x="75" y="76" text-anchor="middle">ratings + lists</text>
+
+    <line class="dg-arrow" x1="140" y1="65" x2="158" y2="65" marker-end="url(#arrow-cine)"></line>
+
+    <rect class="dg-box dg-key" x="160" y="28" width="150" height="74" rx="2"></rect>
+    <text class="dg-label" x="235" y="58" text-anchor="middle">Google OAuth</text>
+    <text class="dg-sub" x="235" y="74" text-anchor="middle">user</text>
+    <text class="dg-sub" x="235" y="88" text-anchor="middle">authentication</text>
+
+    <line class="dg-arrow" x1="310" y1="65" x2="328" y2="65" marker-end="url(#arrow-cine)"></line>
+
+    <rect class="dg-box" x="330" y="38" width="140" height="54" rx="2"></rect>
+    <text class="dg-label" x="400" y="60" text-anchor="middle">Express Backend</text>
+    <text class="dg-sub" x="400" y="76" text-anchor="middle">API layer</text>
+
+    <line class="dg-arrow" x1="470" y1="55" x2="488" y2="45" marker-end="url(#arrow-cine)"></line>
+    <line class="dg-arrow" x1="470" y1="75" x2="488" y2="85" marker-end="url(#arrow-cine)"></line>
+
+    <rect class="dg-box" x="490" y="20" width="120" height="40" rx="2"></rect>
+    <text class="dg-label" x="550" y="44" text-anchor="middle">MongoDB</text>
+
+    <rect class="dg-box" x="490" y="70" width="220" height="40" rx="2"></rect>
+    <text class="dg-label" x="600" y="94" text-anchor="middle">MovieDB API</text>
+  </svg>
+</div></section><div class="case-actions"><a class="button primary" href="https://mycinelist.onrender.com/" target="_blank" rel="noopener">Open the app ↗</a><a class="button secondary" href="#contact">Discuss this project ↓</a></div></article></main>
+
+<footer class="site" id="contact"><div class="wrap contact-panel"><div><h2>Have a role or project in mind?</h2><p>Get in touch to talk software, AI, or games.</p></div><a class="button primary" href="mailto:BevanTo49797@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div><div class="wrap foot-inner"><span>© 2026 Bevan To · Westminster, CA</span><a href="#main">Back to top ↑</a></div></footer>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockPredictor — Bevan To</title>
+<meta name="description" content="A full-stack application connecting machine learning predictions with market data and financial news.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#101211"></head>
+<body class="case-page"><a class="skip-link" href="#main">Skip to content</a><div class="reading-progress" aria-hidden="true"></div>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="identity" href="index.html" aria-label="Bevan To, home"><span class="monogram" aria-hidden="true">bt<span>.</span></span><span class="identity-text"><span class="name">Bevan To</span><span class="role">Software Engineer</span></span></a>
+    <nav class="tabs" aria-label="Portfolio view">
+      
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab" href="swe.html">SWE</a>
+      <a class="tab" href="qa.html">QA</a>
+      <a class="tab" href="gamedev.html">Game Dev</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main"><article class="wrap case-content"><a class="back-link" href="index.html#projects">← Selected work</a><h1>StockPredictor</h1><p class="lede">A full-stack application connecting machine learning predictions with market data and financial news.</p><div class="project-visual custom-art prediction"><svg viewBox="0 0 480 180" class="project-art" aria-hidden="true" focusable="false"><text x="22" y="69" class="art-title">LSTM</text><text x="22" y="96" class="art-caption">historical data → prediction</text><g class="art-scene"><path class="chart-axis" d="M260 35v105h185"></path><path class="forecast-line" pathLength="1" d="m270 117 24-17 22 10 27-45 25 20 28-42 32 12"></path><circle class="forecast-point" cx="428" cy="55" r="6"></circle></g></svg></div><div class="case-sections"><section><h2>The prediction pipeline</h2><p>LSTM models built with TensorFlow use historical market data to predict stock prices. The application connects model inference to a web interface rather than leaving the model as an isolated experiment.</p></section><section><h2>The API layer</h2><p>The NestJS backend exposes REST APIs for predictions, user input, and real-time data. A React frontend calls that backend, which coordinates the model and external data sources.</p></section><section><h2>Adding context</h2><p>Finnhub integration brings relevant financial news alongside predictions. The backend returns the combined results to the frontend.</p></section></div><section class="case-architecture"><h2>System architecture</h2><div class="diagram-wrap">
+  <div class="diagram-label">System overview</div>
+  <svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: React frontend calls NestJS backend, which calls an LSTM model for predictions and the Finnhub API for news, then returns combined results">
+    <defs>
+      <marker id="arrow-stock" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"></path>
+      </marker>
+    </defs>
+
+    <rect class="dg-box" x="230" y="10" width="140" height="50" rx="2"></rect>
+    <text class="dg-label" x="300" y="31" text-anchor="middle">React Frontend</text>
+    <text class="dg-sub" x="300" y="46" text-anchor="middle">predictions + news</text>
+
+    <line class="dg-arrow" x1="300" y1="60" x2="300" y2="78" marker-end="url(#arrow-stock)"></line>
+
+    <rect class="dg-box" x="220" y="80" width="160" height="50" rx="2"></rect>
+    <text class="dg-label" x="300" y="101" text-anchor="middle">NestJS Backend</text>
+    <text class="dg-sub" x="300" y="116" text-anchor="middle">REST API layer</text>
+
+    <line class="dg-arrow" x1="255" y1="130" x2="150" y2="150" marker-end="url(#arrow-stock)"></line>
+    <line class="dg-arrow" x1="345" y1="130" x2="450" y2="150" marker-end="url(#arrow-stock)"></line>
+
+    <rect class="dg-box dg-key" x="60" y="150" width="160" height="34" rx="2"></rect>
+    <text class="dg-label" x="140" y="171" text-anchor="middle">LSTM Model</text>
+
+    <rect class="dg-box" x="400" y="150" width="160" height="34" rx="2"></rect>
+    <text class="dg-label" x="480" y="171" text-anchor="middle">Finnhub API</text>
+  </svg>
+</div></section><div class="case-actions"><a class="button secondary" href="#contact">Discuss this project ↓</a></div></article></main>
+
+<footer class="site" id="contact"><div class="wrap contact-panel"><div><h2>Have a role or project in mind?</h2><p>Get in touch to talk software, AI, or games.</p></div><a class="button primary" href="mailto:BevanTo49797@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div><div class="wrap foot-inner"><span>© 2026 Bevan To · Westminster, CA</span><a href="#main">Back to top ↑</a></div></footer>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+</body></html>
