@@ -84,6 +84,7 @@ section.block{padding-block:70px 0}
 .entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .entry-title{font:500 21px/1.35 var(--font-display);letter-spacing:-.03em;margin:0}
 .entry-title a{text-decoration:none}
+#experience .entry-title a{text-decoration-line:underline;text-decoration-color:currentColor;text-decoration-thickness:1px;text-underline-offset:4px}
 .entry-dates{font:10px/1.8 var(--font-mono);color:var(--muted);white-space:nowrap}
 .project-stack{color:var(--accent);font:10px/1.8 var(--font-mono);margin:12px 0 16px}
 .entry ul{padding-left:17px;margin:16px 0 0}
