@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codebase Archaeologist — Bevan To</title>
+<meta name="description" content="A hackathon project for exploring Python codebases with dependency maps, source-backed analysis, and optional cited AI explanations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#101211"></head>
+<body class="case-page"><a class="skip-link" href="#main">Skip to content</a><div class="reading-progress" aria-hidden="true"></div>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="identity" href="index.html" aria-label="Bevan To, home"><span class="monogram" aria-hidden="true">bt<span>.</span></span><span class="identity-text"><span class="name">Bevan To</span><span class="role">Software Engineer</span></span></a>
+    <nav class="tabs" aria-label="Portfolio view">
+      
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab" href="swe.html">SWE</a>
+      <a class="tab" href="qa.html">QA</a>
+      <a class="tab" href="gamedev.html">Game Dev</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main"><article class="wrap case-content"><a class="back-link" href="index.html#projects">← Selected work</a><h1>Codebase Archaeologist</h1><p class="lede">A hackathon project that turns an unfamiliar Python repository into an explorable map of its structure, relationships, and evidence.</p><div class="case-actions"><a class="button primary" href="https://python-codebase-archaeologist.bevanto49797.chatgpt.site/" target="_blank" rel="noopener">Try the live demo ↗</a><a class="button secondary" href="https://github.com/BeToVan1/CodebaseArchaeologist" target="_blank" rel="noopener">View on GitHub ↗</a></div><div class="project-visual custom-art archaeology"><svg viewBox="0 0 480 180" class="project-art" aria-hidden="true" focusable="false"><text x="22" y="69" class="art-title">Code → context</text><text x="22" y="96" class="art-caption">map · inspect · understand</text><g class="art-scene"><g class="archaeology-edges"><path d="M285 45 345 90 420 40M345 90 285 140M345 90 425 140"></path></g><rect x="270" y="30" width="30" height="30" rx="5"></rect><rect x="405" y="25" width="30" height="30" rx="5"></rect><rect x="270" y="125" width="30" height="30" rx="5"></rect><rect x="410" y="125" width="30" height="30" rx="5"></rect><circle cx="345" cy="90" r="20"></circle><circle class="archaeology-scan" cx="345" cy="90" r="31"></circle></g></svg></div><p class="project-stack">Python / React / TypeScript / React Flow / Cloudflare Workers AI</p><div class="case-sections"><section><h2>From repository to evidence</h2><p>Enter a public Python GitHub repository to explore its dependency map. Deep analysis extracts files, classes, functions, methods, and relationships with source locations. Hosted analysis pins the repository to a commit, keeping the evidence tied to the exact code that was analyzed.</p></section><section><h2>Understand the structure</h2><p>The explorer connects a React Flow map with source inspection, architectural patterns, structural risk findings, and supported execution flows. FastAPI routes and SQLAlchemy persistence form the initial framework-aware slice. Unresolved calls and incomplete paths remain visible rather than being presented as certain runtime behavior.</p></section><section><h2>AI grounded in selected code</h2><p>Optional Cloudflare Workers AI explanations interpret a selected symbol using retained source evidence. The system checks returned references against that evidence and keeps static facts, heuristics, and AI interpretations distinct. Citations support inspection; they do not guarantee that an explanation is correct.</p></section></div><section class="case-architecture"><h2>How the pieces fit</h2><ol class="architecture-steps"><li><strong>Public repository → pinned source.</strong> Analysis captures a specific commit and parses Python code without executing the repository.</li><li><strong>Static analysis → evidence graph.</strong> Symbols, dependencies, findings, and supported paths carry source references.</li><li><strong>Evidence graph → interactive explorer.</strong> The browser links map selections to relevant source and findings, with JSON report export/import.</li><li><strong>Selected symbol → optional AI interpretation.</strong> A server-held report reference retrieves the evidence for a cited explanation.</li></ol></section><section class="case-architecture"><h2>Scope of the hackathon beta</h2><p class="lede">Python-first, with separate inventory and deep-analysis modes. Static analysis exposes useful structure but does not prove runtime execution, and test-proximity signals are not coverage measurements. Imported JSON reports are labeled unverified and cannot request AI explanations.</p></section><div class="case-actions"><a class="button secondary" href="#contact">Discuss this project ↓</a></div></article></main>
+
+<footer class="site" id="contact"><div class="wrap contact-panel"><div><h2>Have a role or project in mind?</h2><p>Get in touch to talk software, AI, or games.</p></div><a class="button primary" href="mailto:BevanTo49797@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div><div class="wrap foot-inner"><span>© 2026 Bevan To · Westminster, CA</span><a href="#main">Back to top ↑</a></div></footer>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+
+</body></html>
