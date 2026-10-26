@@ -28,11 +28,11 @@ if (filters) {
     });
     let count = 0;
     cards.forEach((card) => {
-      card.hidden = category !== 'all' && card.dataset.category !== category;
+      card.hidden = category !== 'all' && !card.dataset.category.split(/\s+/).includes(category);
       if (!card.hidden) count++;
     });
     status.textContent = category === 'all'
-      ? 'All 6 projects. Select a category to filter; select it again to show all.'
+      ? 'All ' + cards.length + ' projects. Select a category to filter; select it again to show all.'
       : count + (count === 1 ? ' project shown. ' : ' projects shown. ') + 'Select ' + button.textContent + ' again to show all.';
     queueProgress();
   });
