@@ -56,3 +56,67 @@ window.addEventListener('scroll', queueProgress, { passive: true });
 window.addEventListener('resize', queueProgress);
 document.addEventListener('toggle', queueProgress, true);
 updateProgress();
+
+// Simple analytics: configure the public GoatCounter site code after making
+// its dashboard private. This is a collection address, never an API key.
+(() => {
+  const siteCode = 'bevanto';
+  const productionHosts = ['bevan-portfolio-eta.vercel.app'];
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(siteCode) ||
+      location.protocol !== 'https:' ||
+      !productionHosts.includes(location.hostname) ||
+      navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
+
+  const pagePath = location.pathname === '/' ? '/index.html' : location.pathname;
+  const resumeTypes = {
+    '/Bevan-To-Resume.pdf': ['resume-swe', 'Résumé click — Software engineering'],
+    '/Bevan-To-Resume-QA.pdf': ['resume-qa', 'Résumé click — QA'],
+    '/Bevan-To-Resume-GameDev.pdf': ['resume-games', 'Résumé click — Game development']
+  };
+  // Do not send query strings, fragments, external referrers, or custom user IDs.
+  window.goatcounter = {
+    endpoint: 'https://' + siteCode + '.goatcounter.com/count',
+    no_onload: true,
+    referrer: ''
+  };
+  const pending = [];
+  let ready = false;
+  let failed = false;
+  function send(data) {
+    if (failed) return;
+    if (!ready) {
+      if (pending.length < 10) pending.push(data);
+      return;
+    }
+    try { window.goatcounter.count(data); } catch { /* Never affect navigation. */ }
+  }
+  function trackResume(event) {
+    if (event.defaultPrevented || (event.type === 'auxclick' && event.button !== 1)) return;
+    const link = event.target.closest?.('a.resume-download');
+    if (!link) return;
+    const url = new URL(link.href, location.href);
+    if (url.origin !== location.origin) return;
+    const resume = resumeTypes[url.pathname];
+    if (resume) send({ path: resume[0], title: resume[1], event: true, referrer: '' });
+  }
+  document.addEventListener('click', trackResume);
+  document.addEventListener('auxclick', trackResume);
+  const tracker = document.createElement('script');
+  tracker.src = 'https://gc.zgo.at/count.js';
+  tracker.async = true;
+  tracker.referrerPolicy = 'no-referrer';
+  tracker.onload = () => {
+    if (typeof window.goatcounter.count !== 'function') {
+      failed = true;
+      pending.length = 0;
+      return;
+    }
+    ready = true;
+    send({ path: pagePath, title: document.title, referrer: '' });
+    pending.splice(0).forEach(send);
+  };
+  tracker.onerror = () => { failed = true; pending.length = 0; };
+  document.head.appendChild(tracker);
+})();
+
+
