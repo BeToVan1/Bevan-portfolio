@@ -250,3 +250,4 @@ footer.site{margin-top:80px;padding-block:26px;border-top:1px solid var(--line)}
 @keyframes trail-route{to{stroke-dashoffset:-.2}}
 @keyframes trail-marker{0%,100%{opacity:1}50%{opacity:.35}}
 @media(prefers-reduced-motion:reduce){.art-scene .trail-route,.art-scene .trail-position{animation:none!important}}
+
