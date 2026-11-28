@@ -239,3 +239,14 @@ footer.site{margin-top:80px;padding-block:26px;border-top:1px solid var(--line)}
  .custom-art{height:auto!important}
 }
 @media(prefers-reduced-motion:reduce){.art-scene *{animation:none!important}}
+
+
+/* Trail Junction: an animated route approaching a junction sign. */
+.custom-art.trail{background:#1d2d27;border-color:#42634e}
+.trail .project-art{color:#b9e89b}
+.trail-contour{opacity:.25;stroke-width:1.5}
+.art-scene .trail-route{stroke-dasharray:.06 .04;animation:trail-route 3s linear infinite paused}
+.art-scene .trail-position{animation:trail-marker 2.4s ease-in-out infinite paused}
+@keyframes trail-route{to{stroke-dashoffset:-.2}}
+@keyframes trail-marker{0%,100%{opacity:1}50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.art-scene .trail-route,.art-scene .trail-position{animation:none!important}}

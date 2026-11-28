@@ -21,6 +21,14 @@ I'm particularly interested in:
 
 ## Featured Projects
 
+### Trail Junction
+
+A mobile-first hiking app built for #BuildHybridAI 2026. Search U.S. trails, download offline maps, interpret junction sign photos with hybrid AI, and keep a photo journal with optional account sync. Gemini Nano supports sign reading on compatible desktop Chrome; cloud Gemini is used when local inference is unavailable and the device is online. Mobile AI requires internet access.
+
+**[Live app](https://trail-junction.web.app/) · [Source code](https://github.com/BeToVan1/TrailJunction)**
+
+**Stack:** React, TypeScript, Firebase AI Logic, Gemini, Firebase Authentication, Cloud Firestore, and a service worker for offline use.
+
 ### ICS Search Engine
 
 A search engine built to index and retrieve information from more than 50,000 UCI web pages.
@@ -108,3 +116,4 @@ I'm currently interested in software engineering opportunities and enjoy connect
 ---
 
 Thanks for checking out my portfolio!
+
