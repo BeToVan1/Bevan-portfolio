@@ -84,48 +84,9 @@
         <h3 class="entry-title"><a class="project-link" href="project-cine.html">MyCineList</a></h3>
         <span class="entry-dates">Sep 2023 – Oct 2023</span>
       </div>
-      <p class="project-stack">Node.js / Express / MongoDB</p><ul>
-        <li>Full-stack app for rating movies and managing personal watchlists</li>
-        <li>User authentication via Google OAuth</li>
-        <li>MongoDB for user data, MovieDB API for movie details</li>
-      </ul>
-      <details class="architecture"><summary>Explore architecture <span aria-hidden="true">+</span></summary><div class="diagram-wrap">
-  <div class="diagram-label">System overview</div>
-  <svg viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: frontend authenticates via Google OAuth, then talks to Express backend, which reads and writes MongoDB and calls the MovieDB API">
-    <defs>
-      <marker id="arrow-cine" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-        <path d="M0,0 L6,3 L0,6 Z" fill="#8A929B"></path>
-      </marker>
-    </defs>
-
-    <rect class="dg-box" x="10" y="38" width="130" height="54" rx="2"></rect>
-    <text class="dg-label" x="75" y="60" text-anchor="middle">Frontend</text>
-    <text class="dg-sub" x="75" y="76" text-anchor="middle">ratings + lists</text>
-
-    <line class="dg-arrow" x1="140" y1="65" x2="158" y2="65" marker-end="url(#arrow-cine)"></line>
-
-    <rect class="dg-box dg-key" x="160" y="28" width="150" height="74" rx="2"></rect>
-    <text class="dg-label" x="235" y="58" text-anchor="middle">Google OAuth</text>
-    <text class="dg-sub" x="235" y="74" text-anchor="middle">user</text>
-    <text class="dg-sub" x="235" y="88" text-anchor="middle">authentication</text>
-
-    <line class="dg-arrow" x1="310" y1="65" x2="328" y2="65" marker-end="url(#arrow-cine)"></line>
-
-    <rect class="dg-box" x="330" y="38" width="140" height="54" rx="2"></rect>
-    <text class="dg-label" x="400" y="60" text-anchor="middle">Express Backend</text>
-    <text class="dg-sub" x="400" y="76" text-anchor="middle">API layer</text>
-
-    <line class="dg-arrow" x1="470" y1="55" x2="488" y2="45" marker-end="url(#arrow-cine)"></line>
-    <line class="dg-arrow" x1="470" y1="75" x2="488" y2="85" marker-end="url(#arrow-cine)"></line>
-
-    <rect class="dg-box" x="490" y="20" width="120" height="40" rx="2"></rect>
-    <text class="dg-label" x="550" y="44" text-anchor="middle">MongoDB</text>
-
-    <rect class="dg-box" x="490" y="70" width="220" height="40" rx="2"></rect>
-    <text class="dg-label" x="600" y="94" text-anchor="middle">MovieDB API</text>
-  </svg>
-</div></details>
-    <a class="case-study-link" href="project-cine.html">Inside the project <span aria-hidden="true">↗</span></a></div><div class="entry reveal project-card" data-category="search" id="ics-search-engine"><div class="project-top"><span class="project-number">04</span><span>Search &amp; retrieval</span><span class="project-glyph" aria-hidden="true">⌕</span></div><div class="project-visual custom-art search"><svg viewBox="0 0 480 180" class="project-art" aria-hidden="true" focusable="false"><text x="22" y="69" class="art-title">50k+</text><text x="22" y="96" class="art-caption">pages indexed</text><g class="art-scene"><g class="search-docs"><rect x="265" y="35" width="112" height="100" rx="7"></rect><path d="M280 56h75M280 76h58M280 96h65M280 116h42"></path></g><g class="search-lens"><circle cx="375" cy="85" r="27"></circle><path d="m394 105 30 30"></path></g></g></svg></div>
+      <p class="project-stack">Node.js / Express / EJS / MongoDB / Vercel</p><ul><li>Discover films through a featured selection, curated shelf, genre filters, and live TMDB search.</li><li>Sign in with Google, rate films from 1–10, and manage sortable, shareable lists and a watchlist.</li><li>Vercel CDN serves Discover; Express on Vercel Functions powers search, sign-in, and saved lists with MongoDB.</li></ul>
+      <details class="architecture"><summary>Explore architecture <span aria-hidden="true">+</span></summary><div class="diagram-wrap"><div class="diagram-label">Vercel deployment</div><svg viewBox="0 0 760 200" role="img" aria-label="Vercel CDN serves Discover to the browser. Search, authentication and lists use Express on Vercel Functions, connected to TMDB, Google OAuth and MongoDB."><g class="dg-arrow"><path d="M160 100H215M385 100H435M605 100H650M520 75V55M520 125V145"></path></g><rect class="dg-box" x="10" y="75" width="150" height="50" rx="5"></rect><text class="dg-label" x="85" y="97" text-anchor="middle">Vercel CDN</text><text class="dg-sub" x="85" y="113" text-anchor="middle">Static Discover</text><rect class="dg-box" x="215" y="75" width="170" height="50" rx="5"></rect><text class="dg-label" x="300" y="97" text-anchor="middle">Browser</text><text class="dg-sub" x="300" y="113" text-anchor="middle">Discovery, ratings, lists</text><rect class="dg-box dg-key" x="435" y="75" width="170" height="50" rx="5"></rect><text class="dg-label" x="520" y="97" text-anchor="middle">Vercel Functions</text><text class="dg-sub" x="520" y="113" text-anchor="middle">Node.js / Express</text><rect class="dg-box" x="650" y="75" width="100" height="50" rx="5"></rect><text class="dg-label" x="700" y="104" text-anchor="middle">MongoDB</text><rect class="dg-box" x="455" y="10" width="130" height="45" rx="5"></rect><text class="dg-label" x="520" y="37" text-anchor="middle">TMDB API</text><rect class="dg-box" x="455" y="145" width="130" height="45" rx="5"></rect><text class="dg-label" x="520" y="172" text-anchor="middle">Google OAuth</text></svg></div></details>
+    <div class="project-resources"><a href="https://mycinelist-cyan.vercel.app/" target="_blank" rel="noopener">Live app ↗</a><a href="https://github.com/BeToVan1/MyCineList" target="_blank" rel="noopener">GitHub ↗</a></div><a class="case-study-link" href="project-cine.html">Inside the project <span aria-hidden="true">↗</span></a></div><div class="entry reveal project-card" data-category="search" id="ics-search-engine"><div class="project-top"><span class="project-number">04</span><span>Search &amp; retrieval</span><span class="project-glyph" aria-hidden="true">⌕</span></div><div class="project-visual custom-art search"><svg viewBox="0 0 480 180" class="project-art" aria-hidden="true" focusable="false"><text x="22" y="69" class="art-title">50k+</text><text x="22" y="96" class="art-caption">pages indexed</text><g class="art-scene"><g class="search-docs"><rect x="265" y="35" width="112" height="100" rx="7"></rect><path d="M280 56h75M280 76h58M280 96h65M280 116h42"></path></g><g class="search-lens"><circle cx="375" cy="85" r="27"></circle><path d="m394 105 30 30"></path></g></g></svg></div>
       <div class="entry-head">
         <h3 class="entry-title"><a class="project-link" href="project-ics.html">ICS Search Engine</a></h3>
         <span class="entry-dates">Nov 2023 – Dec 2023</span>
@@ -235,6 +196,8 @@
 <footer class="site" id="contact"><div class="wrap contact-panel"><div><h2>Have a role or project in mind?</h2><p>Get in touch to talk software, AI, or games.</p></div><a class="button primary" href="mailto:BevanTo49797@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div><div class="wrap foot-inner"><span>© 2026 Bevan To · Westminster, CA</span><a href="#main">Back to top ↑</a></div></footer>
 
 <script src="script.js"></script>
+
+
 
 
 

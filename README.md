@@ -45,14 +45,15 @@ A full-stack application that uses machine learning to predict stock prices from
 
 ### MyCineList
 
-A full-stack movie tracking application that allows users to search for movies, rate them, and maintain personalized watchlists.
+A full-stack film discovery and collection application, hosted on Vercel.
+
+**[Live app](https://mycinelist-cyan.vercel.app/) · [Source code](https://github.com/BeToVan1/MyCineList)**
 
 **Highlights:**
-- Implemented Google OAuth authentication
-- Built backend functionality with Node.js and Express
-- Used MongoDB for persistent user data
-- Integrated the TMDB API for movie information
-- Developed rating, search, and watchlist functionality
+- Featured films, a curated discovery shelf, genre filters, now-playing movies, and live TMDB search
+- Google OAuth sign-in, 1–10 ratings, watchlists, and sortable, shareable movie lists
+- Node.js, Express, EJS, and MongoDB for application logic, rendering, account data, and sessions
+- Static Discover page served by the Vercel CDN; dynamic features handled by Vercel Functions
 
 ## Technical Skills
 
@@ -108,3 +109,4 @@ I'm currently interested in software engineering opportunities and enjoy connect
 ---
 
 Thanks for checking out my portfolio!
+
